@@ -1,0 +1,75 @@
+baseURL = "https://грозненскийрабочий.рф"
+languageCode = "ru-ru"
+title = "Грозненский рабочий"
+theme = "mytheme"
+
+[params]
+description = "Старейшее печатное издание Чеченской Республики. Издаётся с марта 1917 года в Грозном."
+keywords = "грозненский рабочий, новости, газета, грозный, чечня"
+
+# Social links
+[[params.social]]
+name = "Telegram"
+url = "https://t.me/grozrab"
+
+[[params.social]]
+name = "WhatsApp"
+url = "https://wa.me/78001234567"
+
+# Menu
+[[menu.main]]
+name = "Главная"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Новости"
+url = "/blog"
+weight = 2
+
+[[menu.main]]
+name = "О нас"
+url = "/about"
+weight = 3
+
+[[menu.main]]
+name = "Контакты"
+url = "/contact"
+weight = 4
+
+# Footer menu
+[[menu.footer]]
+name = "Главная"
+url = "/"
+
+[[menu.footer]]
+name = "Новости"
+url = "/blog"
+
+[[menu.footer]]
+name = "О нас"
+url = "/about"
+
+[[menu.footer]]
+name = "Контакты"
+url = "/contact"
+
+[[menu.footer]]
+name = "Политика"
+url = "/privacy"
+
+[[menu.footer]]
+name = "Условия"
+url = "/terms"
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+
+[services]
+[services.disqus]
+shortname = "грозненский-рабочий"
+
+# Pagination
+[pagination]
+pageSize = 12

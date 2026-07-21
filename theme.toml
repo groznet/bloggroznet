@@ -1,0 +1,18 @@
+name = "mytheme"
+license = "MIT"
+licenselink = "https://github.com/user/mytheme/blob/master/LICENSE"
+description = "Professional Hugo theme for Грозненский рабочий newspaper"
+homepage = "https://github.com/user/mytheme"
+tags = ["newspaper", "blog", "news", "russian"]
+features = ["blog", "categories", "tags", "responsive"]
+min_version = "0.84.0"
+
+[author]
+  name = "Your Name"
+  homepage = "https://example.com"
+
+# If using or porting an existing theme
+[original]
+  name = "Original Author"
+  homepage = "https://original.example.com"
+  repo = "https://github.com/original/repo"

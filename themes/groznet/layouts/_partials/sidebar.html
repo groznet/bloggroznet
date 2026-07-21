@@ -1,0 +1,92 @@
+<aside class="lg:col-span-1 order-2 lg:order-1">
+    <div class="sticky top-4 space-y-6">
+
+        <div class="space-y-4">
+            <div class="flex items-center justify-between border-b border-neutral-100 dark:border-neutral-800 pb-2">
+                <h2 class="text-xl font-bold font-sans text-neutral-800 dark:text-white">Категории</h2>
+                <a href="/categories/" class="text-xs text-blue-600 dark:text-blue-400 hover:underline font-medium">Все категории</a>
+            </div>
+            
+            <ul class="space-y-2">
+                {{ $categories := .Site.Taxonomies.categories.ByCount }}
+                {{ range first 5 $categories }}
+                <li>
+                    <a href="{{ .Page.RelPermalink }}" class="flex justify-between items-center text-sm text-neutral-600 dark:text-neutral-400 hover:text-blue-600 dark:hover:text-blue-400 group transition-colors duration-150">
+                        <span class="group-hover:underline">{{ .Page.Title }}</span>
+                        <span class="text-xs bg-neutral-100 dark:bg-neutral-800 px-2 py-0.5 rounded text-neutral-500">({{ .Count }})</span>
+                    </a>
+                </li>
+                {{ end }}
+                
+                {{ if gt (len $categories) 5 }}
+                <details class="group/details">
+                    <summary class="list-none flex items-center gap-1 text-xs text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 dark:hover:text-neutral-300 cursor-pointer select-none mt-2 font-medium">
+                        <span class="group-open/details:hidden">Показать еще ↓</span>
+                        <span class="hidden group-open/details:inline">Свернуть ↑</span>
+                    </summary>
+                    <div class="space-y-2 mt-2 pt-1 border-t border-dashed border-neutral-200 dark:border-neutral-800">
+                        {{ range after 5 $categories }}
+                        <li>
+                            <a href="{{ .Page.RelPermalink }}" class="flex justify-between items-center text-sm text-neutral-600 dark:text-neutral-400 hover:text-blue-600 dark:hover:text-blue-400 group transition-colors duration-150">
+                                <span class="group-hover:underline">{{ .Page.Title }}</span>
+                                <span class="text-xs bg-neutral-100 dark:bg-neutral-800 px-2 py-0.5 rounded text-neutral-500">({{ .Count }})</span>
+                            </a>
+                        </li>
+                        {{ end }}
+                    </div>
+                </details>
+                {{ end }}
+            </ul>
+        </div>
+
+        <div class="space-y-4 mt-8">
+            <div class="flex items-center justify-between border-b border-neutral-100 dark:border-neutral-800 pb-2">
+                <h2 class="text-xl font-bold font-sans text-neutral-800 dark:text-white">Теги</h2>
+                <a href="/tags/" class="text-xs text-blue-600 dark:text-blue-400 hover:underline font-medium">Все теги</a>
+            </div>
+
+            <div class="flex flex-wrap gap-2">
+                {{ $tags := .Site.Taxonomies.tags.ByCount }}
+                {{ range first 8 $tags }}
+                <a href="{{ .Page.RelPermalink }}" class="inline-flex items-center text-xs px-2.5 py-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 rounded-md hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors duration-150">
+                    {{ .Page.Title }}
+                    <span class="text-neutral-400 dark:text-neutral-500 ml-1">({{ .Count }})</span>
+                </a>
+                {{ end }}
+
+                {{ if gt (len $tags) 8 }}
+                <details class="w-full group/details">
+                    <summary class="list-none flex items-center gap-1 text-xs text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 dark:hover:text-neutral-300 cursor-pointer select-none mt-1 font-medium">
+                        <span class="group-open/details:hidden">Показать еще ↓</span>
+                        <span class="hidden group-open/details:inline">Свернуть ↑</span>
+                    </summary>
+                    <div class="flex flex-wrap gap-2 mt-3 pt-2 border-t border-dashed border-neutral-200 dark:border-neutral-800">
+                        {{ range after 8 $tags }}
+                        <a href="{{ .Page.RelPermalink }}" class="inline-flex items-center text-xs px-2.5 py-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 rounded-md hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors duration-150">
+                            {{ .Page.Title }}
+                            <span class="text-neutral-400 dark:text-neutral-500 ml-1">({{ .Count }})</span>
+                        </a>
+                        {{ end }}
+                    </div>
+                </details>
+                {{ end }}
+            </div>
+        </div>
+
+        <!-- Recent posts -->
+        <div>
+            <h2 class="text-xl font-bold mb-4 font-sans text-gray-900">Недавние публикации</h2>
+            <ul class="space-y-3">
+                {{ range first 5 (where .Site.RegularPages "Section" "") }}
+                <li>
+                    <a href="{{ .RelPermalink }}" class="text-sm text-blue-600 hover:underline font-sans line-clamp-2">
+                        {{ .Title }}
+                    </a>
+                    <span class="text-xs text-gray-500">{{ .Date.Format "02.01.2006" }}</span>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+
+    </div>
+</aside>

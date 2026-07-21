@@ -1,0 +1,143 @@
+baseURL = "https://blog.groznet.com/"
+languageCode = "ru-ru"
+title = "Blog GrozNet"
+theme = "groznet"
+enableRobotsTXT = true
+defaultContentLanguage = "ru"
+hasCJKLanguage = false
+summaryLength = 70
+canonifyURLs = true
+pluralizeListTitles = false
+
+# Build options
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+# Markup settings (Crucial for custom HTML inside Markdown)
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true     
+  [markup.highlight]
+    noClasses = false
+    style = "monokai"
+
+[pagination]
+  pagerSize = 10
+
+##############################################
+# Site parameters (theme variables)
+##############################################
+[params]
+  siteName = "GrozNet Blog Site"
+  siteDescription = "GrozNet static blog site built with Hugo"
+  author = "Kerim"
+  copyright = "© 2026 GrozNet"
+  defaultImage = "/images/og-default.jpg"
+  dateFormat = "Jan 2, 2006"
+
+  # Contact info
+  email = "info@groznet.com"
+  phone = "+7 (000) 000-00-00"
+  address = "Grozny, Chechnya"
+
+  # Social links (Font Awesome 6 compatible)
+  [[params.social]]
+    name = "Facebook"
+    icon = "fa-brands fa-facebook"
+    url = "https://www.facebook.com/GrozNet/"
+
+  [[params.social]]
+    name = "WhatsApp"
+    icon = "fa-brands fa-whatsapp" # or "fa fa-whatsapp" depending on your FA version
+    url = "https://wa.me/+79298883327"
+
+  [[params.social]]
+    name = "Telegram"
+    icon = "fa-brands fa-telegram" # or "fa fa-telegram"
+    url = "https://t.me/groznetcom"
+
+  [[params.social]]
+    name = "VK"
+    icon = "fa-brands fa-vk" # or "fa fa-vk"
+    url = "https://vk.com/groznetcom"
+
+  [[params.social]]
+    name = "Instagram"
+    icon = "fa-brands fa-instagram"
+    url = "https://instagram.com/groznet"
+
+  [[params.social]]
+    name = "YouTube"
+    icon = "fa-brands fa-youtube"
+    url = "#"
+
+  # Appearance
+  [params.theme]
+    layout = "default"
+    colorScheme = "light"      
+    logo = "/images/logo.png"
+    favicon = "/favicon.ico"
+
+  # Section toggles
+  [params.sections]
+    showHero = true
+    showFeatures = true
+    showBlog = true
+    showTestimonials = false
+    showCTA = true
+
+##############################################
+# Taxonomies
+##############################################
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  author = "authors"
+  location = "locations"
+
+##############################################
+# Menus
+##############################################
+[menu]
+  [[menu.main]]
+    name = "Главная"
+    url = "https://groznet.com"
+    weight = 1
+  [[menu.main]]
+    name = "Услуги"
+    url = "https://groznet.com/services"
+    weight = 2
+  [[menu.main]]
+    name = "Наши Проекты"
+    url = "https://groznet.com/projects"
+    weight = 3
+  [[menu.main]]
+    name = "Партнеры"
+    url = "https://groznet.com/partners"
+    weight = 4
+  [[menu.main]]
+    name = "Новости"
+    url = "/" # Points directly to your blog home page
+    weight = 5
+  [[menu.main]]
+    name = "О Компании"
+    url = "https://groznet.com/about"
+    weight = 6
+  [[menu.main]]
+    name = "Связаться"
+    url = "https://groznet.com/contact"
+    weight = 7
+
+##############################################
+# SEO & Optimization
+##############################################
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[minify]
+  disableXML = true
+  tdewolff = { html = { keepWhitespace = false } }

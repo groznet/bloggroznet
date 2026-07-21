@@ -1,0 +1,96 @@
+{{ define "main" }}
+
+{{ partial "breadcrumb.html" . }}
+
+<div class="mx-auto py-12 bg-white dark:bg-neutral-900">
+  <div class="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8 px-4">
+    
+    <div class="order-2 lg:order-1">
+      {{ partial "sidebar.html" . }}
+    </div>
+
+    <main class="lg:col-span-3 max-w-4xl order-1 lg:order-2">
+      <article>
+        <!-- Title -->
+        <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 font-serif dark:text-white mb-4">
+          {{ .Title }}
+        </h1>
+
+        <header class="mb-6 flex flex-wrap items-center gap-3 text-sm italic text-gray-500 dark:text-neutral-400 font-sans">
+            <span>{{ .Date.Format "02.01.2006" }}</span>
+
+            {{ if .Params.author }}
+                <svg class="h-1 w-1 text-gray-400" viewBox="0 0 6 6" fill="currentColor">
+                    <circle cx="3" cy="3" r="3" />
+                </svg>
+
+                <span>
+                    Автор:
+                    <span class="font-medium text-gray-700 dark:text-neutral-200">
+                        {{ .Params.author }}
+                    </span>
+                </span>
+            {{ end }}
+
+            {{ with .Params.categories }}
+                <svg class="h-1 w-1 text-gray-400" viewBox="0 0 6 6" fill="currentColor">
+                    <circle cx="3" cy="3" r="3" />
+                </svg>
+
+                <span>
+                    Категория:
+                    {{ range $index, $category := . }}
+                        {{ if $index }}, {{ end }}
+                        <a
+                            href="{{ "categories/" | relURL }}{{ $category | urlize }}/"
+                            class="font-medium text-gray-700 hover:underline dark:text-neutral-200">
+                            {{ $category }}
+                        </a>
+                    {{ end }}
+                </span>
+            {{ end }}
+        </header>
+
+        {{ $img := .Resources.GetMatch .Params.image }}
+        {{ if $img }}
+          <div class="mb-8">
+            <img src="{{ $img.RelPermalink }}" alt="{{ .LinkTitle }}" class="w-full h-auto max-h-[450px] object-cover rounded-md border border-neutral-200 dark:border-neutral-800">
+          </div>
+        {{ else if .Params.image }}
+          <div class="mb-8">
+            <img src="{{ .Params.image | relURL }}" alt="{{ .LinkTitle }}" class="w-full h-auto max-h-[450px] object-cover rounded-md border border-neutral-200 dark:border-neutral-800">
+          </div>
+        {{ end }}
+
+        <div class="prose max-w-none text-gray-800 dark:text-neutral-200 leading-relaxed space-y-6">
+          {{ .Content }}
+        </div>
+        
+        <div class="mt-12 pt-6 border-t border-gray-200 dark:border-neutral-800">
+            <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+
+                <a href="/" class="inline-flex items-center gap-2 font-sans text-blue-600 hover:underline dark:text-blue-400">
+                    <i class="fas fa-arrow-left text-xs"></i>
+                    Назад в блог
+                </a>
+
+                {{ with .Params.tags }}
+                    <div class="flex flex-wrap items-center gap-2">
+                        {{ range . }}
+                            <a
+                                href="{{ "tags/" | relURL }}{{ . | urlize }}/"
+                                class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-700 transition hover:bg-gray-200 dark:bg-neutral-800 dark:text-gray-300 dark:hover:bg-neutral-700">
+                                #{{ . }}
+                            </a>
+                        {{ end }}
+                    </div>
+                {{ end }}
+
+            </div>
+        </div>
+      </article>
+    </main>
+
+  </div>
+</div>
+{{ end }}

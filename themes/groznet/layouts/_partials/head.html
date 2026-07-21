@@ -1,0 +1,51 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}Создание сайтов в Грозном Веб-студия GrozNet. Поддержка и SEO продвижение сайтов, интернет-магазинов реклама 8(929)888-33-27{{ end }}">
+<meta name="keywords" content="Создание сайтов в Грозном, разработка сайтов Грозный, техподдержка, интернет-магазины, реклама">
+<meta name="author" content="Керим Тимирбулатов">
+
+<title>
+  {{ if .IsHome }}
+    {{ site.Title }}
+  {{ else }}
+    {{ printf "%s | %s" .Title site.Title }}
+  {{ end }}
+</title>
+
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="/images/logo200x200.png">
+<link rel="manifest" href="/manifest.json">
+
+<noscript>
+    <meta http-equiv="refresh" content="0; url=/noscript.html">
+</noscript>
+
+<script src="https://kit.fontawesome.com/1b1dcc9abc.js" crossorigin="anonymous"></script>
+
+<script src="/js/tailwind.js"></script>
+<script src="/js/main.js"></script>
+<link rel="stylesheet" href="/css/main.css">
+
+<script>
+    tailwind.config = {
+        theme: {
+            container: {
+                center: true,
+                padding: '16px',
+                screens: {
+                    DEFAULT: '1280px'
+                }
+            },
+            extend: {
+                fontFamily: {
+                    serif: ['serif'],
+                    sans: ['Arial', 'Helvetica', 'sans-serif']
+                }
+            }
+        },
+        corePlugins: {
+            preflight: true
+        }
+    }
+</script>

@@ -1,0 +1,15 @@
+{
+  "name": "mytheme",
+  "version": "1.0.0",
+  "description": "Hugo theme for Грозненский рабочий newspaper",
+  "scripts": {
+    "dev": "hugo server",
+    "build": "hugo --minify",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24"
+  }
+}

@@ -1,0 +1,224 @@
+<!-- Topbar -->
+<div class="border-b border-gray-200 text-[14px] text-gray-500 py-2">
+    <div class="container flex flex-wrap justify-between">
+
+        <div class="w-1/2 md:w-1/4">
+            <p>Создание сайтов в Грозном</p>
+        </div>
+
+        <div class="w-1/2 md:w-1/4">
+            <p class="text-right md:text-left">
+                <a href="https://www.facebook.com/GrozNet/"><i class="fa-brands fa-facebook"></i></a>
+                &nbsp;
+                <a href="https://wa.me/+79298883327"><i class="fa fa-whatsapp"></i></a>
+                &nbsp;
+                <a href="https://t.me/groznetcom"><i class="fa fa-telegram"></i></a>
+                &nbsp;
+                <a href="https://vk.com/groznetcom"><i class="fa fa-vk"></i></a>
+                &nbsp;
+                <a href="https://instagram.com/groznet"><i class="fa fa-instagram"></i></a>
+                &nbsp;
+                <a href="#"><i class="fa fa-youtube"></i></a>
+            </p>
+        </div>
+
+        <div class="w-1/2 md:w-1/4">
+            <p>
+                <a href="#">Гарантия</a>
+                <a href="/contact">Помощь</a>
+                <a href="#">ЧАВО</a>
+            </p>
+        </div>
+
+        <div class="w-1/2 md:w-1/4">
+            <p class="text-right">
+                <i class="fa fa-lock"></i>
+                <a href="/login">Вход</a>
+                <a href="/register">Регистрация</a>
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<!-- Midbar -->
+<div class="text-gray-700">
+    <div class="container flex flex-wrap justify-between">
+
+        <!-- Logo -->
+        <div id="logo" class="flex items-center w-1/3 lg:w-1/5 py-2 md:py-5">
+            <a href="/">
+                <img
+                    src="/images/logo.svg"
+                    alt="GrozNet"
+                    class="w-[2.8em] opacity-60"
+                >
+            </a>
+
+            <a href="/" class="hover:no-underline">
+                <p class="-ml-[1.4em]">
+                    <span class="text-[28px] font-bold text-white [text-shadow:1px_1px_3px_rgb(100_115_125),0_0_3px_#92a6ae] font-serif">
+                        <span class="invisible">G</span>rozNet
+                    </span>
+                </p>
+            </a>
+        </div>
+
+        <!-- Worktime -->
+        <div class="flex items-center justify-end md:justify-center gap-2 w-2/3 lg:w-1/5 py-2 md:py-5">
+            <img
+                src="/images/icons/worktime-48x48.png"
+                width="35"
+                class="opacity-60"
+                alt="График работы"
+            >
+
+            <p class="text-[15px]">
+                <span class="text-gray-700">
+                    Пон - Суб 9:00 - 18:00
+                </span>
+                <br>
+                <span class="text-sm text-gray-500">
+                    Служба поддержки 24/7
+                </span>
+            </p>
+        </div>
+
+        <!-- Address -->
+        <div
+            id="address"
+            class="flex items-center justify-start md:justify-center gap-2 w-1/2 lg:w-1/5 py-2 md:py-5 md:bg-[url('/images/address-bg.png')] bg-no-repeat"
+        >
+            <img
+                src="/images/icons/office-address-48x48.png"
+                width="35"
+                class="opacity-60"
+                alt="Адрес"
+            >
+
+            <p class="text-[15px]">
+                <span class="text-gray-700">
+                    пр-т Путина 8
+                </span>
+                <br>
+                <span class="text-sm text-gray-500">
+                    Грозный, Чечня
+                </span>
+            </p>
+        </div>
+
+        <!-- Contacts -->
+        <div
+            id="contacts"
+            class="flex items-center justify-end md:justify-center gap-2 w-1/2 lg:w-1/5 py-0 md:py-5 md:bg-[url('/images/contacts-bg.png')] bg-no-repeat"
+        >
+            <img
+                src="/images/icons/contact-us-icon-51x48.png"
+                width="35"
+                class="opacity-60"
+                alt="Контакты"
+            >
+
+            <p class="text-[15px]">
+                <span class="text-gray-700">
+                    <a href="tel:+79298883327">
+                        8 (929) 888-33-27
+                    </a>
+                </span>
+                <br>
+                <span class="text-sm text-gray-500">
+                    <a href="mailto:info@groznet.com">
+                        info@groznet.com
+                    </a>
+                </span>
+            </p>
+        </div>
+
+        <!-- CTA -->
+        <div class="hidden lg:flex items-center justify-end w-1/5">
+            <a href="/contact">
+                <button class="px-4 py-2 rounded-[15px] bg-[#52ab98] text-white">
+                    <i class="fa fa-shopping-cart"></i>
+                    Заказать сайт
+                </button>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<!-- Navigation -->
+<div class="border-y border-gray-200 bg-white">
+    <div class="container mx-auto px-0 clear-both">
+        <form id="search-form" class="float-right leading-[46px] pr-[15px] md:pr-0 flex items-center h-[46px] space-x-2" >
+            <input
+                type="text"
+                name="keyword"
+                placeholder="Введите название..."
+                class="text-gray-600 text-sm px-3 py-1 bg-gray-50 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 transition-all placeholder-gray-400"
+                >
+            <input
+                type="submit"
+                value="Найти"
+                class="text-gray-600 text-sm bg-white border border-gray-300 rounded px-3 py-1 hover:bg-gray-50 cursor-pointer transition-colors font-medium"
+                >
+        </form>
+        <span
+            id="menu"
+            class="block md:hidden leading-[46px] text-gray-600 hover:text-gray-900 cursor-pointer select-none transition-colors"
+            >
+        <i class="fa fa-bars pl-[15px] text-lg"></i>
+        </span>
+        <nav id="navbar" class="hidden md:block clear-both md:clear-none">
+            <ul class="m-0 p-0 list-none leading-[45px]">
+                <li class="md:inline-block border-t md:border-0 border-gray-200">
+                    <a href="https://groznet.com" class="block px-4 py-2 text-gray-600 no-underline text-sm font-medium">
+                        Главная
+                    </a>
+                </li>
+                <li class="md:inline-block border-t md:border-0 border-gray-200">
+                    <a href="https://groznet.com/services" class="block px-4 py-2 text-gray-600 no-underline text-sm font-medium">
+                        Услуги
+                    </a>
+                </li>
+                <li class="md:inline-block border-t md:border-0 border-gray-200">
+                    <a href="https://groznet.com/projects" class="block px-4 py-2 text-gray-600 no-underline text-sm font-medium">
+                        Наши Проекты
+                    </a>
+                </li>
+                <li class="md:inline-block border-t md:border-0 border-gray-200">
+                    <a href="https://groznet.com/partners" class="block px-4 py-2 text-gray-600 no-underline text-sm font-medium">
+                        Партнеры
+                    </a>
+                </li>
+                <li class="md:inline-block border-t md:border-0 border-gray-200">
+                    <a href="/" class="block px-4 py-2 text-gray-600 no-underline text-sm font-medium">
+                        Новости
+                    </a>
+                </li>
+                <li class="md:inline-block border-t md:border-0 border-gray-200">
+                    <a href="https://groznet.com/about" class="block px-4 py-2 text-gray-600 no-underline text-sm font-medium">
+                        О Компании
+                    </a>
+                </li>
+                <li class="md:inline-block border-t md:border-0 border-gray-200">
+                    <a href="https://groznet.com/contact" class="block px-4 py-2 text-gray-600 no-underline text-sm font-medium">
+                        Связаться
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var currentPath = window.location.pathname;
+
+        document.querySelectorAll(".navbar a").forEach(function (link) {
+            if (link.getAttribute("href") === currentPath) {
+                link.parentNode.classList.add("active");
+            }
+        });
+    });
+</script>
