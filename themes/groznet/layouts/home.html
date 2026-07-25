@@ -59,12 +59,11 @@
               <div class="text-xs text-gray-500 italic font-sans flex flex-wrap items-center gap-3 pt-3 border-t border-neutral-200 dark:border-neutral-800">
                 <span>{{ .Date.Format "02.01.2006" }}</span>
                 
-                {{ if .Params.author }}
-                    <svg class="h-1 w-1 text-gray-400" viewBox="0 0 6 6" fill="currentColor">
-                        <circle cx="3" cy="3" r="3" />
-                    </svg>
-                    <span>{{ .Params.author }}</span>
-                {{ end }}
+<!-- GoatCounter Views -->
+<span class="flex items-center gap-1" title="Просмотры">
+    <i class="fa-regular fa-eye text-xs text-gray-400"></i>
+    <span id="goatcounter-views">—</span>
+</span>
 
                 <svg class="h-1 w-1 text-gray-400" viewBox="0 0 6 6" fill="currentColor">
                     <circle cx="3" cy="3" r="3" />
