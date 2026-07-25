@@ -2,6 +2,7 @@
 <html lang="{{ site.Language.LanguageCode | default "ru" }}" dir="{{ or site.Language.LanguageDirection `ltr` }}" class="h-full scroll-smooth">
 <head>
     {{ partial "head.html" . }}
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="1bd2365c-2d99-40bb-ae5e-9b2dd03f3898"></script>
 </head>
 <body class="min-h-full flex flex-col bg-neutral-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-50 transition-colors duration-300">
 
@@ -13,7 +14,7 @@
         {{ block "main" . }}{{ end }}
     </main>
 
-    <footer id="footer" class="bg-neutral-50 dark:bg-neutral-950 text-neutral-500 dark:text-neutral-400 text-[13px] pt-16 pb-8 border-t border-neutral-200/50 dark:border-neutral-900 transition-colors duration-300">
+    <footer id="footer" class="bg-neutral-50 dark:bg-neutral-950 text-neutral-500 dark:text-neutral-400 text-[13px] pt-16 pb-8 border-t border-neutral-200/50 dark:border-neutral-900 transition-colors [...]
         {{ partial "footer.html" . }}
     </footer>
 
