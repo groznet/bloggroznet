@@ -118,7 +118,7 @@ buildExpired = false
     url = "https://groznet.com/partners"
     weight = 4
   [[menu.main]]
-    name = "Новости"
+    name = "Блог и новости"
     url = "/" # Points directly to your blog home page
     weight = 5
   [[menu.main]]
