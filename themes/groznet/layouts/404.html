@@ -1,0 +1,48 @@
+{{ define "main" }}
+
+<section class="py-20 md:py-28 bg-white dark:bg-neutral-900">
+    <div class="container mx-auto px-4 max-w-3xl text-center">
+
+        <div class="mb-8">
+            <span class="inline-block text-7xl md:text-8xl font-serif font-bold text-neutral-300 dark:text-neutral-700">
+                404
+            </span>
+        </div>
+
+        <h1 class="text-3xl md:text-5xl font-serif font-bold tracking-tight text-neutral-800 dark:text-white mb-6">
+            Страница не найдена
+        </h1>
+
+        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-2xl mx-auto mb-10">
+            Возможно, страница была удалена, перемещена или ссылка содержит ошибку.
+            Попробуйте перейти на главную страницу, воспользоваться поиском или выбрать один
+            из популярных разделов сайта.
+        </p>
+
+        <div class="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+            <a
+                href="/"
+                class="inline-flex items-center justify-center px-6 py-3 bg-neutral-800 text-white rounded-md hover:bg-neutral-700 transition-colors"
+            >
+                ← На главную
+            </a>
+
+            <a
+                href="/blog/"
+                class="inline-flex items-center justify-center px-6 py-3 border border-neutral-300 dark:border-neutral-700 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+            >
+                Все статьи
+            </a>
+
+            <a
+                href="/contact/"
+                class="inline-flex items-center justify-center px-6 py-3 border border-neutral-300 dark:border-neutral-700 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+            >
+                Связаться
+            </a>
+        </div>
+
+    </div>
+</section>
+
+{{ end }}
