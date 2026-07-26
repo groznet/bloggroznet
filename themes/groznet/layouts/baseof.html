@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.Language.LanguageCode | default "ru" }}" dir="{{ or site.Language.LanguageDirection `ltr` }}" class="h-full scroll-smooth">
+<html lang="{{ site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection "ltr" }}" class="h-full scroll-smooth">
 <head>
     {{ partial "head.html" . }}
     <script defer src="https://cloud.umami.is/script.js" data-website-id="1bd2365c-2d99-40bb-ae5e-9b2dd03f3898"></script>
@@ -14,12 +14,13 @@
         {{ block "main" . }}{{ end }}
     </main>
 
-    <footer id="footer" class="bg-neutral-50 dark:bg-neutral-950 text-neutral-500 dark:text-neutral-400 text-[13px] pt-16 pb-8 border-t border-neutral-200/50 dark:border-neutral-900 transition-colors [...]
+    <footer
+        id="footer"
+        class="bg-neutral-50 dark:bg-neutral-950 text-neutral-500 dark:text-neutral-400 text-[13px] pt-16 pb-8 border-t border-neutral-200/50 dark:border-neutral-900 transition-colors"
+    >
         {{ partial "footer.html" . }}
     </footer>
 
     <script src="{{ "js/main.js" | relURL }}"></script>
-    <script data-goatcounter="https://groznet.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

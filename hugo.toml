@@ -1,5 +1,5 @@
 baseURL = "https://blog.groznet.com/"
-languageCode = "ru-ru"
+locale = "ru-RU"
 title = "Blog GrozNet"
 theme = "groznet"
 enableRobotsTXT = true
@@ -39,7 +39,7 @@ buildExpired = false
 
   # Contact info
   email = "info@groznet.com"
-  phone = "+7 (000) 000-00-00"
+  phone = "+7 (929) 888-33-27"
   address = "Grozny, Chechnya"
 
   # Social links (Font Awesome 6 compatible)
@@ -141,3 +141,4 @@ buildExpired = false
 [minify]
   disableXML = true
   tdewolff = { html = { keepWhitespace = false } }
+
