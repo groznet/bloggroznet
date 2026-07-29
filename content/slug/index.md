@@ -1,8 +1,14 @@
-+++ date = '2026-07-13T03:30:00-07:00' draft = false title = 'Title of the post' author = 'Керим' image = 'featured.jpg'
++++ 
+date = '2026-07-13T03:30:00-07:00'
+draft = false
+title = 'Title of the post'
+author = 'Керим'
+image = 'featured.jpg'
 
 tags = [ "tag1", "tag2" ]
 
-categories = [ "Cat1", "Cat2" ] +++
+categories = [ "Cat1", "Cat2" ]
++++
 
 Almost thirty days have passed since I lost my mother.
 
