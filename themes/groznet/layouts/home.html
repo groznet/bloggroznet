@@ -59,11 +59,12 @@
               <div class="text-xs text-gray-500 italic font-sans flex flex-wrap items-center gap-3 pt-3 border-t border-neutral-200 dark:border-neutral-800">
                 <span>{{ .Date.Format "02.01.2006" }}</span>
                 
-<!-- GoatCounter Views -->
-<span class="flex items-center gap-1" title="Просмотры">
-    <i class="fa-regular fa-eye text-xs text-gray-400"></i>
-    <span id="goatcounter-views">—</span>
-</span>
+                <span class="inline-flex items-center gap-1"
+                    id="page-views"
+                    data-path="{{ .RelPermalink }}">
+                    <i class="fa-regular fa-eye text-xs"></i>
+                    <span id="page-views"></span>
+                </span>
 
                 <svg class="h-1 w-1 text-gray-400" viewBox="0 0 6 6" fill="currentColor">
                     <circle cx="3" cy="3" r="3" />
